@@ -1,0 +1,24 @@
+
+html, body {
+	height:100%;
+}
+
+.skrollr-desktop body {
+	height:100% !important;
+}
+
+#categories-list-cont {
+	position: relative;
+}
+
+.item-parallax {
+	position: absolute;
+	z-index: 5;
+
+	img {
+		@media (max-width: @screen-sm-max) {
+			width: 40%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,320 @@
+
+html {
+	font-size: 100%;
+  	-ms-text-size-adjust: 100%;
+  	-webkit-text-size-adjust: 100%;
+  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+/********** CONTENUTO *********/
+
+.pdg-top {
+	padding-top: 60px;
+}
+
+.pdg-bottom {
+	padding-bottom: 100px;
+}
+
+.box-padding {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	right: 12px;
+	bottom: 12px;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.max-width {
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.max-width-min {
+	position: relative;
+	max-width: 460px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.line-bg {
+	background: url('../images/line-blue.png') center center repeat-y;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.line-bg-light {
+	background: url('../images/line-light.png') center center repeat-y;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+section {
+	.pdg-top;
+	.pdg-bottom;
+	position: relative;
+	z-index: 2;
+	background-color: #FFF;
+}
+
+
+#intro-bg {
+	position: fixed;
+	width: 100%;
+	height: 100vH;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	z-index: 0;
+}
+
+#intro-top {
+	position: relative;
+	height: 100vH;
+	width: 100%;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	background: none;
+	z-index: 1;
+	
+	.center-content {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		padding-top: 40px;
+		transform: translateY(-50%);
+	}
+
+	h1 {
+		color: #FFF;
+		font-size: @font-size-large;
+		line-height: 1em;
+		margin: 0;
+		padding: 0;
+
+		text-shadow: 0 5px 0 @brand-primary;
+	}
+
+	h2 {
+		padding: 0;
+		margin: 15px 0;
+	}
+
+}
+
+
+#intro-white {
+	font-weight: 500;
+	padding-bottom: 70px;
+	//margin-top: 100vH;
+}
+
+#intro-bg,
+#intro-top {
+	top: 0;
+	//margin-top: 80px;
+}
+
+#intro-bg,
+#intro-top,
+#intro-white {
+	transition: all 1500ms cubic-bezier(1, 0, 0, 1);
+}
+
+.topCheckPoint {
+
+	#intro-top {
+		
+		.center-content {
+			//position: absolute;
+		}
+	}
+
+	#intro-bg,
+	#intro-top {
+		height: 480px;
+	}
+
+}
+
+
+#categories-cont {
+	background-color: @brand-tertiary;
+}
+
+#services-cont {
+	background-color: @brand-secondary;
+
+
+	& {
+		color: @brand-tertiary;
+	}
+}
+
+.items-list-cont {
+	.make-row(20px);
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	.item {
+		.make-xxs-column(12, 20px);
+		.make-xs-column(6, 20px);
+		.make-sm-column(6, 20px);
+		.make-md-column(4, 20px);
+		text-align: center;
+		margin-bottom: 20px;
+
+		img {
+			.img-responsive-full;
+		}
+	}
+
+	.inner {
+		position: relative;
+		background-color: #FFF;
+		perspective: 1000;
+		-moz-perspective: 1000;
+		-webkit-perspective: 1000;
+	}
+
+	.side-front {
+		.box-padding;
+
+		&.bordered {
+			border: 2px solid @brand-secondary;
+		}
+	}
+
+	.side-back {
+		.box-padding;
+		background-color: @brand-secondary;
+		color: @brand-tertiary;
+		font-size: @font-size-semi-small;
+		transform: rotateY(180deg);
+
+		span {
+			display: block;
+			line-height: 1.6em;
+		}
+	}
+
+	h3 {
+		.center;
+		font-weight: 100;
+		width: 100%;
+		max-width: 140px;
+		margin: 0 auto;
+		padding: 0;
+
+		@media (max-width: @screen-xs-max) {
+			max-width: 80%;
+		}
+	}
+
+	.product-cont {
+		.center;
+		width: 100%;
+	}
+}
+
+
+
+.flip-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    transition: 0.6s;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform-style: preserve-3d;
+
+	&.flipMe {
+		transform: rotateY(180deg);
+	}
+
+	.side-front,
+	.side-back {
+		backface-visibility: hidden;
+	}
+
+	.side-front {
+		z-index: 2;
+		/* for firefox 31 */
+		transform: rotateY(0deg);
+	}
+
+	.side-back {
+		transform: rotateY(180deg);
+	}
+
+	.button {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: @font-size-small;
+		font-weight: @headings-font-weight;
+
+		&.close {
+			width: 18px;
+			height: 18px;
+			background: url('../images/icon-close@2x.png') center center no-repeat;
+			background-size: 18px 18px;
+			bottom: 20px;
+		}
+
+	}
+
+	.flip {
+		cursor: pointer;
+		cursor: hand;
+	}
+}
+
+#services-cont {
+
+	.items-list-cont {
+		padding-top: 90px;
+		padding-bottom: 90px;
+
+		.item {
+			.make-xxs-column(12, 20px);
+			.make-md-column(4, 20px);
+		}
+	}
+
+	.product-cont {
+		padding-bottom: 30px;
+	}
+}
+
+
+#reference-slider {
+	font-size: @font-size-semi-medium;
+	line-height: 1.8em;
+
+	.reference-text {
+		font-style: italic;
+		font-weight: 100;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.reference-person {
+		display: block;
+	}
+}

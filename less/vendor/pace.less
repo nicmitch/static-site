@@ -1,0 +1,45 @@
+
+
+.pace {
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: @theme-brand-primary;
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  right: 100%;
+  width: 100%;
+  height: 1px;
+  margin-top: 40px;
+}
+
+#loader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:	0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: url('images/logo-loading.gif') #FFF center center no-repeat;
+	transition: all 200ms;
+}
+
+.pace-done {
+
+	#loader-overlay {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+}

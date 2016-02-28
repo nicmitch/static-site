@@ -1,0 +1,59 @@
+//
+// Panels
+// --------------------------------------------------
+
+.panel {
+  margin-bottom: 1px;
+  color: @text-color;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+
+  img {
+    .img-responsive;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.panel-body {
+  padding: @panel-body-padding;
+  &:extend(.clearfix all);
+}
+
+// Optional heading
+.panel-heading {
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+
+  a {
+    display: block;
+    padding: @panel-heading-padding;
+    background-color:;
+
+    &:before {
+      .font-icon;
+      content: "\f105";
+      margin-right: 8px;
+      opacity: 0.4;
+    }
+  }
+
+  &, a, a:hover, a:active {
+    color: @text-color;
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    background-color: ;
+  }
+}

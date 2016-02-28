@@ -1,0 +1,52 @@
+
+#reference-slider {
+	margin: 0;
+	border-radius: 0;
+	padding-top: 30px;
+	padding-bottom: 80px;
+
+	.panel {
+		border-radius: 0;
+	}
+
+	.slick-slide {
+		outline: none !important;
+	}
+
+	.slick-dots {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		text-align: center;
+		transform: translateX(-50%);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		button {
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			margin: 0;
+			font-size: 0;
+			border-radius: 50%;
+			display: inline-block;
+			background-color: @brand-tertiary;
+			border: none;
+			transition: background-color 300ms;
+			outline: none !important;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0;
+			margin: 0 5px;
+
+			button:hover,
+			button:active,
+			&.slick-active button {
+				background-color: @brand-secondary;
+			}
+		}
+	}
+}
