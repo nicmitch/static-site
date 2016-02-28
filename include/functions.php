@@ -3,7 +3,7 @@
 /* Utility functions */
 
 define('TEMPLATE_DIR', '../templates/');
-define('SITE_DIR', 'http://www.nicolamerici.com/italianfood');
+define('SITE_DIR', '/github-projects/static-site/');
 define('CONTENT_DIR', '../content/');
 define('DEFAULT_LANG', 'en');
 

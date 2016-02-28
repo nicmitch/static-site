@@ -4,7 +4,7 @@ var parentClass = 'form-group';
 var activeClass = "isActive";
 var sendButton = ".send_button";
 var loadingClass = "loading";
-var defaultAction =  templateUrl + '/form/sendmail.php';
+var defaultAction =  templateUrl + 'form/sendmail.php';
 
 function valida_modulo(modulo, messaggio_errore) {
 
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
 
 	// Funzione di check sull'entrata nei campi text e textarea
-	$('form input, form textarea').focus(function() {
+	$('form input, form textarea, form select').focus(function() {
 		if($(this).parent('.'+parentClass).hasClass(inValidClass)){
 			$(this).parent('.'+parentClass).removeClass(inValidClass);
 		}
@@ -117,15 +117,13 @@ $(document).ready(function() {
 		$(this).addClass(activeClass);
 	});
 
-	$('form input, form textarea').focusout(function() {
+	$('form input, form textarea, form select').focusout(function() {
 		if($(this).val() == ''){
 			$(this).parent('.'+parentClass).removeClass(activeClass);
 		};
 	});
-
-
-
-	$('form input[data-required], form textarea[data-required]').focusout(function(){
+	
+	$('form input[data-required], form textarea[data-required], form select[data-required]').focusout(function(){
 		
 		if($(this).val() == $(this).attr('placeholder') || $(this).val() == ''){
 			$(this).parent('.'+parentClass).addClass(inValidClass);
@@ -145,7 +143,8 @@ $(document).ready(function() {
 	// Funzione di validazione sull'entrata nei campi select
 	$('form select[data-required]').change(function() {
 		$thisCont = $(this).parent('.'+parentClass);		
-		if($thisCont.hasClass(inValidClass)){$thisCont.removeClass(inValidClass);}		
+		if($thisCont.hasClass(inValidClass)){$thisCont.removeClass(inValidClass);}	
+		console.log($(this).val());	
 		if($(this).val() == ""){$thisCont.addClass(inValidClass);};
 	});
 

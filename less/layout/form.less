@@ -1,82 +1,12 @@
 
 form {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	
-	.form-control {
-		border-width: 2px;
-		outline: none;
-	}
 
-	.inValid {
+	.form-control {
+		outline: none;
 	}
 
 	.btn-group {
 		width: 100%;
-	}
-
-	.cancel-button {
-	    appearance: none;
-		color: @text-color;
-		text-decoration: underline;
-		background: none;
-		border: none;
-		margin-top: 20px;
-		font-size: @font-size-small;
-		outline: none !important;
-
-		&:hover, &:active {
-			text-decoration: none;
-		}
-	}
-
-	.send_button {
-		margin-top: 40px;
-	}
-
-	.multiselect {
-		width: 100%;
-		background: url('../images/select-bg@2x.png') #FFF 97% center no-repeat !important;
-		background-size: 9px auto !important;
-		text-align: left;
-		padding: @padding-small-vertical @padding-small-horizontal;
-		transform: none;
-		font-weight: 400;
-
-		&:active {
-			transform: translateY(0px) !important;
-		}
-
-		&:hover {
-			box-shadow: none !important;
-		}
-
-		.form-control-focus();
-	}
-
-
-	.dropdown-menu {
-		background-color: #FFF;
-
-		> li {
-			> a {
-				color: @text-color;
-
-				&:hover, &:active {
-					color: @text-color;
-					background-color: lighten(@brand-tertiary, 8%);
-				}
-			}
-		}
-
-		> .active {
-			> a {
-				&, &:hover, &:focus {
-					color: @text-color;
-					background-color: #FFF;
-				}
-			}
-		}
 	}
 
 	input,
@@ -86,11 +16,9 @@ form {
 	}
 
 	input[type="checkbox"] {
-		border: 1px solid @brand-secondary;
 		width: 20px;
 		height: 20px;
 		border-radius: 0px;
-		background: url('../images/select-check@2x.png') center center no-repeat;
 		background-size: 0px auto;
 
 		&:checked {

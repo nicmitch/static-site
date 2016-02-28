@@ -11,46 +11,29 @@
 	line-height: @navbar-height;
 
 	> li {
-		float: none;
-		display: inline-block;
-		padding-left: 10px;
-		padding-right: 10px;
 
 		> a {
-			padding: 0 10px;
-			line-height: 30px;
 
 			&:hover, &:active, &:focus {
-				color: @brand-tertiary;
 			}
 		}
 	}
 
 	.dropdown {
 		> a {
-			border: 2px solid @brand-tertiary;
 		}
 	}
 
 	.dropdown-menu {
-		min-width: 0px;
-		font-size: @font-size-small;
-		left: 50%;
-		transform: translateX(-50%);
-		text-align: center;
 
 		> li {
 			> a {
-				padding-left: 10px;
-				padding-right: 10px;
 			}
 		}
 	}
 }
 
 .navbar-collapse {
-	padding-left: 0;
-	padding-right: 0;
 }
 
 
@@ -102,28 +85,4 @@
 			}
 		}
 	}
-}
-
-.openMobileMenu {
-
-	#menu-handler {
-
-		.hamb {
-
-			.first {
-				transform: rotate(45deg);
-				top: 7px;
-			}
-
-			.second {
-				opacity: 0;
-			}
-
-			.third {
-				transform: rotate(-45deg);
-				top: 7px;
-			}
-		}
-	}
-
 }

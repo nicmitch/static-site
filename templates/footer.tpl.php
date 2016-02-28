@@ -1,6 +1,12 @@
+<footer id="footer-main">
+    <div class="container align-center">
+    	
+    </div>
+</footer>
+
 <script>
-	var templateUrl = "http://www.nicolamerici.com/italianfood";
-	var messaggio_errore_mail = "<?php echo $texts['formValidationMail']; ?>";
+	var templateUrl = "<?php echo SITE_DIR; ?>";
+	var messaggio_errore_mail = "<?php echo $texts['form_validationMail']; ?>";
 </script>
 
 		<?php /*
