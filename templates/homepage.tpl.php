@@ -71,7 +71,7 @@
                 <div class="max-width-min">
                     <div class="inner">
                         <div class="line-bg">
-                            <?php echo $texts['form_sendMessage']; ?>
+                            <?php echo $texts['form_sendText']; ?>
                         </div>
                         <a href="../<?php echo $lng; ?>/" class="btn btn-default btn-full btn-gray btn-uppercase"><?php echo $texts['form_sendBack']; ?></a>
                     </div>

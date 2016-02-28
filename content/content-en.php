@@ -12,7 +12,10 @@ $texts = array(
 	'form_button' => "Send",
 	'form_reset' => "Cancel",
 	'form_validation' => "There is a validation error. Check the required fields and send the message again.",
-	'form_validationMail' => "Insert a valid email"
+	'form_validationMail' => "Insert a valid email",
+	'form_sendTitle' => "The request has been successfully sent",
+	'form_sendText' => "The request has been successfully sent",
+	'form_sendBack' => "Go Back"
 );
 
 ?>
